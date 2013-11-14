@@ -1,0 +1,10 @@
+<h1>Stores</h1>
+<%= link_to "Back to Products", products_path %>
+
+<% @stores['result'].each do |store| %>
+    <div>
+      <%= link_to store['name'], store_path(store['id']) %>
+      <%= store['city'] %>
+      <%= store['postal_code'] %>
+    </div>
+<% end %>

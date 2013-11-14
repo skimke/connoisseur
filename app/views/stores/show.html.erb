@@ -1,0 +1,39 @@
+<h1>Store Details</h1>
+<%= link_to "Back", stores_path %>
+
+<h2><%= @store['name'] %></h2>
+<p><%= @store['address_line_1'] %>
+<%= @store['address_line_2'] %><br>
+<%= @store['city'] %><br>
+<%= @store['postal_code'] %>
+</p>
+<p>
+  <h4>Hours of Operation:</h4>
+  Sunday:
+  <%= format_time(@store['sunday_open'])%> - 
+  <%= format_time(@store['sunday_close'])%>
+  <br>
+  Monday:
+  <%= format_time(@store['monday_open'])%> - 
+  <%= format_time(@store['monday_close'])%>
+  <br>
+  Tuesday:
+  <%= format_time(@store['tuesday_open'])%> - 
+  <%= format_time(@store['tuesday_close'])%>
+  <br>
+  Wednesday:
+  <%= format_time(@store['wednesday_open'])%> - 
+  <%= format_time(@store['wednesday_close'])%>
+  <br>
+  Thursday:
+  <%= format_time(@store['thursday_open'])%> - 
+  <%= format_time(@store['thursday_close'])%>
+  <br>
+  Friday:
+  <%= format_time(@store['friday_open'])%> - 
+  <%= format_time(@store['friday_close'])%>
+  <br>
+  Saturday:
+  <%= format_time(@store['saturday_open'])%> - 
+  <%= format_time(@store['saturday_close'])%>
+</p>
