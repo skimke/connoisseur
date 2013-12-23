@@ -7,6 +7,7 @@ class StoresController < ApplicationController
   end
 
   def show
-    @store = API.get_store
+    parsed_json = JSON.parse(open("http://lcboapi.com/stores/#{params[:id]}").read)
+    @store = parsed_json['result']
   end
 end
